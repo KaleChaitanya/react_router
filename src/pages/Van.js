@@ -32,15 +32,15 @@ const Van = () => {
         <div className='van-list-container'>
             <h1>Explorer our van options</h1>
             <div className='van-list-filter-buttons'>
-                <Link className='van-type simple' to="?type=simple">Simple</Link>
-                <Link className='van-type luxury' to="?type=luxury">Luxury</Link>
-                <Link className='van-type rugged' to="?type=rugged">Rugged</Link>
-                <Link className='van-type clear-filters' to=".">Clear Filter</Link>
+                <button className='van-type simple' onClick={() => setSearchParams({ 'type': 'simple' })}>Simple</button>
+                <button className='van-type luxury' onClick={() => setSearchParams({ 'type': 'luxury' })}>Luxury</button>
+                <button className='van-type rugged' onClick={() => setSearchParams({ 'type': 'rugged' })}>Rugged</button>
+                <button className='van-type clear-filters' onClick={() => setSearchParams("")}>Clear Filter</button>
             </div>
             <div className='van-list'>
                 {vanElement}
             </div>
-        </div>
+        </div >
     )
 }
 
